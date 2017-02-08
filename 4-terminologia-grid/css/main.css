@@ -1,0 +1,76 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    font-family: sans-serif;
+    font-size: 12px;
+    width: 700px;
+    height: 500px;
+    border: 1px solid gray;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    /* CUADRICULA - GRID CONTAINER */
+    /*Grid Container: Es el elemento que hace de cuadrícula y que contiene elementos grid en diferentes disposiciones.*/
+    /*background-color: indianred;*/
+}
+
+main > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+section {
+    border: 1px solid gray;
+
+    /* GRID LINES */
+    /*Son la base de cada Grid/cuadrícula y pueden ser horizontales o verticales. Se puede acceder a ellas a través de*/
+/*        border-left: 2px dashed blue;
+        border-right: 2px dashed blue;
+        border-top: 2px dashed orange;
+        border-bottom: 2px dashed orange;*/
+}
+
+/* GRID TRACK */
+/*Grid Track: Es el espacio que se extiende entre dos (2) grid lines. Pudiendo ser estas horizontales O verticales (row O column lines).*/
+/*
+section:nth-of-type(26), section:nth-of-type(27), section:nth-of-type(28), section:nth-of-type(29) {
+    background-color: dodgerblue;
+}
+*/
+
+/* GRID CELL */
+/*Grid Cell: Es el espacio entre cuatro grid lines. Además es la unidad más pequeña posible en un Grid/cuadrícula. Es algo así como la celda de una tabla.*/
+/*section:nth-of-type(10) {
+    background-color: greenyellow;
+}*/
+
+/* GRID AREA */
+/*Grid Area: Es cualquier area del Grid/cuadrícula delimitada por cuatro (4) Grid lines. Puede contener cualquier número de Grid Cells.*/
+section:nth-of-type(9), section:nth-of-type(10), section:nth-of-type(11),
+section:nth-of-type(15), section:nth-of-type(16), section:nth-of-type(17),
+section:nth-of-type(21), section:nth-of-type(22), section:nth-of-type(23),
+section:nth-of-type(27), section:nth-of-type(28), section:nth-of-type(29) {
+    background-color: goldenrod;
+}
