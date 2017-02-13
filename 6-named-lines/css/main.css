@@ -1,0 +1,76 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+main {
+    font-family: sans-serif;
+    font-size: 20px;
+    width: 90%;
+    min-height: 500px;
+    border: 1px solid gray;
+    display: grid;
+    /*grid-template-columns: 1fr 1fr 1fr;*/
+    grid-template-columns: [inicio sumario col-1] 1fr [contenido col-2] 1fr [mas-info col-3] 1fr [final];
+    /*grid-template-rows: 200px auto 1fr;*/
+    grid-template-rows: [inicio fila-1] 200px [fila-2] auto [fila-3] 1fr [final];
+}
+
+/* Layout */
+.imagen {
+    background-color: black;
+    background-image: url(http://www.ocio.net/wp-content/uploads/mascotas/negros3.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    grid-column: inicio / final;
+    grid-row: inicio;
+}
+
+.titulo {
+    font-size: 40px;
+    font-family: Garamond serif;
+    font-weight: bold;
+    text-align: center;
+    grid-column: inicio / final;
+    grid-row: fila-2;
+}
+
+.columna {
+    padding: 10px;
+    border: 1px solid gray;
+    font-family: sans-serif;
+}
+
+.sumario {
+    font-size: 10px;
+    grid-column: sumario;
+    grid-row: fila-3 ;
+}
+
+.contenido {
+    font-size: 18px;
+    grid-column: contenido;
+    grid-row: fila-3;
+}
+
+.mas-info {
+    font-size: 14px;
+    grid-column: mas-info;
+    grid-row: fila-3;
+}
